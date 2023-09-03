@@ -412,7 +412,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Noto Serif SC', 'Bitter', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'Bitter', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
 }
 code,
 pre {
@@ -1064,7 +1064,7 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: 'Noto Serif SC', 'Bitter', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
+  font-family: 'Bitter', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
 }
 .is-family-secondary {
   font-family: 'Oxanium', Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
@@ -10731,6 +10731,7 @@ body > .section {
 }
 .link-muted {
   color: inherit;
+  transition: 200ms ease;
 }
 .link-muted:hover {
   color: #fcee09 !important;
@@ -10781,6 +10782,7 @@ body > .section {
 }
 .card .media + .media {
   border: none;
+  margin-top: 0;
 }
 .underlined,
 article.article .content h1,
@@ -10837,6 +10839,13 @@ article.article .article-meta {
 article.article .content {
   word-wrap: break-word;
   font-size: 1.2rem;
+}
+article.article .content ul p:first-child {
+  margin-top: 1.6rem;
+  margin-bottom: 0.3em;
+}
+article.article .content li {
+  margin-top: 1em;
 }
 article.article .content h1 {
   font-size: 1.75em;
@@ -11287,7 +11296,7 @@ figure.highlight {
   padding: 0;
   width: 100%;
   position: relative;
-  margin: 1em 0 1em !important;
+  margin: 1.5em 0 1.5em !important;
   border-radius: 0;
 }
 figure.highlight.folded .highlight-body {
@@ -11331,15 +11340,20 @@ figure.highlight figcaption {
   font-style: normal;
   font-size: 0.8em;
 }
-figure.highlight figcaption * {
-  color: inherit;
+figure.highlight figcaption a {
+  color: rgba(255,255,255,0.65);
+  transition: 200ms linear;
+}
+figure.highlight figcaption a:hover {
+  color: #fff;
 }
 figure.highlight figcaption span {
   font-weight: 500;
   font-family: 'Roboto Mono', monospace, 'Microsoft YaHei';
+  cursor: default;
 }
 figure.highlight figcaption .level-left *:not(:last-child) {
-  margin-right: 0.5em;
+  margin-right: 0.75em;
 }
 figure.highlight figcaption .level-right *:not(:first-child) {
   margin-left: 0.5em;
@@ -11351,7 +11365,11 @@ figure.highlight figcaption.level {
   overflow: auto;
 }
 figure.highlight figcaption.level .level-right a {
-  padding: 0em 0.75em;
+  padding: 0;
+  padding-right: 0.75em;
+}
+figure.highlight figcaption.level .level-right a:first-child {
+  padding-right: 0.5em;
 }
 figure.highlight .highlight-body {
   overflow: auto;
@@ -11373,9 +11391,6 @@ figure.highlight .section {
   vertical-align: inherit;
   min-width: inherit;
   border-radius: inherit;
-}
-figure.highlight.foldable div.level-left {
-  cursor: pointer;
 }
 .gist table tr:hover {
   background: transparent;
@@ -11604,9 +11619,6 @@ figure.highlight.foldable div.level-left {
   line-height: inherit;
 }
 .MathJax,
-.MathJax_Display,
-.MJXc-display,
-.MathJax_SVG_Display,
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -11677,21 +11689,18 @@ figure.highlight.foldable div.level-left {
   text-decoration: none !important;
   background-color: #f5e703;
 }
-@media screen and (min-width: 1280px) {
-  .is-1-column .container,
-  .is-2-column .container {
-    max-width: 960px;
-    width: 960px;
-  }
-}
 @media screen and (min-width: 1472px) {
   .is-2-column .container {
-    max-width: 1152px;
-    width: 1152px;
+    max-width: 1280px;
+    width: 1280px;
   }
   .is-1-column .container {
-    max-width: 960px;
-    width: 960px;
+    max-width: 1088px;
+    width: 1088px;
+  }
+  article.article-post {
+    padding: 4rem;
+    padding-top: 2rem;
   }
 }
 @media screen and (min-width: 769px), print {
@@ -11712,6 +11721,9 @@ figure.highlight.foldable div.level-left {
 @media screen and (max-width: 768px) {
   .section {
     padding: 1.5rem 1rem;
+  }
+  article.article {
+    padding: 1rem;
   }
 }
 body {
