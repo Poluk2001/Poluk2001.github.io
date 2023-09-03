@@ -10783,6 +10783,9 @@ body > .section {
   border: none;
   margin-top: 0;
 }
+.card .title.is-size-3.is-block.line-height-inherit {
+  font-weight: bold;
+}
 .underlined,
 article.article .content h1,
 article.article .content h2,
