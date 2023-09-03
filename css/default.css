@@ -10784,7 +10784,7 @@ body > .section {
   margin-top: 0;
 }
 .card .title.is-size-3.is-block.line-height-inherit {
-  font-weight: 550;
+  font-weight: 500;
 }
 .underlined,
 article.article .content h1,
@@ -11044,6 +11044,9 @@ footer.footer {
     text-align: center;
   }
 }
+footer.footer .footer-logo is-block mb-2 {
+  font-size: 20px;
+}
 footer.footer .level-end .field {
   flex-wrap: wrap;
   align-items: center;
@@ -11053,12 +11056,6 @@ footer.footer .level-end .field {
     justify-content: center;
     margin-top: 1rem;
   }
-}
-.footer-logo img {
-  max-height: 3rem;
-}
-.footer-logo is-block mb-2 {
-  font-size: 20px;
 }
 .pagination {
   margin-top: 1.5rem;
