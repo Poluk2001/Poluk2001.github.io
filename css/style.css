@@ -10753,6 +10753,9 @@ body > .section {
   width: 100% !important;
   height: 100% !important;
 }
+.button {
+  transition: 200ms linear;
+}
 .button.is-transparent {
   color: inherit;
   background: transparent;
@@ -10771,9 +10774,12 @@ body > .section {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+.card .card-content .menu-label {
+  font-size: 1.25em;
+  font-weight: bold;
+}
 .card .media + .media {
   border: none;
-  margin-top: 0;
 }
 .underlined,
 article.article .content h1,
@@ -10959,10 +10965,11 @@ a.article-nav-next span {
   white-space: normal;
 }
 .navbar-main {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-.navbar-main .navbar-container {
-  overflow-x: auto;
+  font-size: 1.25em;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 100%);
+  border-image-slice: 2;
 }
 .navbar-main .navbar-menu,
 .navbar-main .navbar-start,
@@ -10971,19 +10978,20 @@ a.article-nav-next span {
   display: flex;
   padding: 0;
   flex-shrink: 0;
+  flex-grow: 0;
 }
 .navbar-main .navbar-menu {
-  flex-grow: 1;
-  flex-shrink: 0;
   overflow-x: auto;
 }
 .navbar-main .navbar-start {
   justify-content: flex-start;
+  margin-left: 1em;
   margin-right: auto;
 }
 .navbar-main .navbar-end {
   justify-content: flex-end;
-  margin-left: auto;
+  margin-left: 2.5em;
+  margin-right: auto;
 }
 .navbar-main .navbar-item {
   display: flex;
@@ -10995,25 +11003,23 @@ a.article-nav-next span {
   background-color: transparent;
 }
 @media screen and (max-width: 1087px) {
+  .navbar-main .navbar-item {
+    padding: 1.25rem 0.75rem;
+    margin: 0 0;
+  }
   .navbar-main .navbar-menu {
     justify-content: center;
     box-shadow: none;
   }
   .navbar-main .navbar-start {
-    margin-right: 0;
+    margin-left: auto;
   }
   .navbar-main .navbar-end {
-    margin-left: 0;
+    margin-right: auto;
   }
 }
 .navbar-logo img {
   max-height: 2rem;
-}
-@media screen and (min-width: 1088px) {
-  .navbar > .container .navbar-menu,
-  .container > .navbar .navbar-menu {
-    margin-right: 0rem;
-  }
 }
 footer.footer {
   margin-top: 2rem;
