@@ -10991,6 +10991,12 @@ a.article-nav-next span {
     margin-right: 0rem;
   }
 }
+footer.footer {
+  margin-top: 2rem;
+  border-top: 10px solid transparent;
+  border-image: linear-gradient(90deg, #52e5e7 0%, #130cb7 100%);
+  border-image-slice: 1;
+}
 @media screen and (max-width: 768px) {
   footer.footer .level-start {
     text-align: center;
@@ -11007,7 +11013,7 @@ footer.footer .level-end .field {
   }
 }
 .footer-logo img {
-  max-height: 2rem;
+  max-height: 3rem;
 }
 .pagination {
   margin-top: 1.5rem;
