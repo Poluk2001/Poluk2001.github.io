@@ -11058,6 +11058,9 @@ footer.footer .level-end .field {
 .footer-logo img {
   max-height: 3rem;
 }
+.footer-logo is-block mb-2 {
+  font-size: 20px;
+}
 .pagination {
   margin-top: 1.5rem;
 }
