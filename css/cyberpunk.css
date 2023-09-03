@@ -412,7 +412,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Bitter', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: 'Noto Serif SC', 'Bitter', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
 }
 code,
 pre {
@@ -1064,7 +1064,7 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: 'Bitter', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
+  font-family: 'Noto Serif SC', 'Bitter', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
 }
 .is-family-secondary {
   font-family: 'Oxanium', Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
