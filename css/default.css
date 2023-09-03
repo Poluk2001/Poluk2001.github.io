@@ -10784,7 +10784,7 @@ body > .section {
   margin-top: 0;
 }
 .card .title.is-size-3.is-block.line-height-inherit {
-  font-weight: bold;
+  font-weight: 550;
 }
 .underlined,
 article.article .content h1,
