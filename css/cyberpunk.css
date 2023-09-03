@@ -530,7 +530,7 @@ table th {
   font-size: 1.25rem !important;
 }
 .is-size-6,
-article.media .title {
+article.media .title:not(.not-article-part) {
   font-size: 1rem !important;
 }
 .is-size-7,
@@ -10347,12 +10347,12 @@ body > .section {
   padding-bottom: 0 !important;
 }
 .ml-1,
-.mx-1,
-.article-licensing .licensing-meta .icons .icon {
+.mx-1 {
   margin-left: 0.25rem !important;
 }
 .mr-1,
-.mx-1 {
+.mx-1,
+.article-licensing .licensing-meta .icon {
   margin-right: 0.25rem !important;
 }
 .ml-n1,
@@ -10776,6 +10776,13 @@ body > .section {
   border: none;
   margin-top: 0;
 }
+.underlined,
+article.article .content h1,
+article.article .content h2,
+article.article-post .title {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 0.2em;
+}
 article.media {
   color: #848484;
 }
@@ -10794,7 +10801,7 @@ article.media .image img {
   width: 100%;
   height: 100%;
 }
-article.media .title {
+article.media .title:not(.not-article-part) {
   margin-bottom: 0.25em;
 }
 article.media .media-content {
@@ -10803,6 +10810,15 @@ article.media .media-content {
 article.media .media-content .title {
   margin: 0;
   line-height: inherit;
+}
+article.article {
+  padding: 2.25rem;
+  padding-top: 1.5rem;
+}
+article.article .title:not(.not-article-part) {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 10px;
 }
 article.article .article-meta,
 article.article .article-tags {
@@ -10814,7 +10830,7 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
@@ -10855,9 +10871,17 @@ article.article .content .message.message-immersive {
 article.article .content .message.message-immersive .message-body {
   border: none;
 }
-article.article .article-tags {
-  display: flex;
-  flex-wrap: wrap;
+article.article-post .title {
+  padding-bottom: 0.4em;
+  margin-bottom: 0.5em;
+}
+article.article-post .content {
+  line-height: 1.8;
+}
+article.article-post .content-end-separator {
+  border-bottom: 6px dotted rgba(0,0,0,0.3);
+  margin-top: 4rem;
+  margin-bottom: 2.25rem;
 }
 .rtl {
   direction: rtl;
@@ -10914,7 +10938,7 @@ article.article .article-tags {
 .article-licensing .licensing-title {
   line-height: 1.2;
 }
-.article-licensing .licensing-meta .icons .icon {
+.article-licensing .licensing-meta .icon {
   width: 1.2em;
   height: 1.2em;
   font-size: 1.2em;
